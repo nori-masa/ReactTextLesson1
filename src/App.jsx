@@ -1,7 +1,11 @@
 import "./styles.css";
+import { useState } from "react";
 import { ColoredMessage } from "./components/ColoredMessage";
 
 export default function App() {
+  // Stateの定義
+  const [num, setNum] = useState(0);
+
   const onClickButton = () => {
     alert();
   };
