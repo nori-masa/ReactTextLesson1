@@ -1,13 +1,15 @@
-import "./styles.css";
+// import "./styles.css";
 import { useState } from "react";
 import { ColoredMessage } from "./components/ColoredMessage";
 
 export default function App() {
+  console.log("レンダリング");
+
   // Stateの定義
   const [num, setNum] = useState(0);
 
   const onClickButton = () => {
-    alert();
+    setNum((prev) => prev + 1);
   };
 
   return (
@@ -18,6 +20,7 @@ export default function App() {
       <button className="btn btn-primary" onClick={onClickButton}>
         ボタン
       </button>
+      <p>{num}</p>
     </div>
   );
 }
